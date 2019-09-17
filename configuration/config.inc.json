@@ -1,0 +1,31 @@
+{
+  "domains": [
+    "scotlandforeurope.local",
+    "test.scotlandforeurope.scot",
+    "scotlandforeurope.scot",
+    "www.scotlandforeurope.scot"
+  ],
+  "routes": [
+    "{:./routes/*.json}"
+  ],
+  "metaData": {
+    "assetsVersion": "{:../package.json@version}",
+    "assetsBase": "https://storage.googleapis.com/scvo-assets/test/scotlandforeurope/",
+    "menus": "{:./data/menus.json}",
+    "handlebars": {
+      "partials": {
+        "{$./partials/**/*.*}": "includeRelativePath=false&regexExpression=(-)&regexOptions=gi&regexReplace=_"
+      },
+      "templates": {
+        "{$./templates/**/*.*}": ""
+      },
+      "layouts": {
+        "{$./layouts/**/*.*}": ""
+      },
+      "queries": {
+        "{$./queries/**/*.*}": ""
+      }
+    },
+    "elasticsearchUrl": "{$./data/elasticsearch-url.txt}"
+  }
+}

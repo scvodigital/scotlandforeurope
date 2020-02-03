@@ -42,6 +42,42 @@
 
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-LRlmVvLKVApDVGuspQFnRQJjkv0P7/YFrw84YYQtmYG4nK8c+M+NlmYDCv0rKWpG" crossorigin="anonymous">
 
+  <style type="text/css">
+  @font-face {
+  font-family: 'Asap';
+  src: url('{{~>asset_url url='fonts/Asap-Bold.eot'~}}');
+  src: url('{{~>asset_url url='fonts/Asap-Bold.eot?#iefix'~}}') format('embedded-opentype'),
+       url('{{~>asset_url url='fonts/Asap-Bold.woff2'~}}') format('woff2'),
+       url('{{~>asset_url url='fonts/Asap-Bold.woff'~}}') format('woff'),
+       url('{{~>asset_url url='fonts/Asap-Bold.ttf'~}}') format('truetype'),
+       url('{{~>asset_url url='fonts/Asap-Bold.svg#Asap-Bold'~}}') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Ingra';
+  src: url('{{~>asset_url url='fonts/IngraSCVO-Regular.eot'~}}');
+  src: url('{{~>asset_url url='fonts/IngraSCVO-Regular.eot?#iefix'~}}') format('embedded-opentype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.woff2'~}}') format('woff2'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.woff'~}}') format('woff'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.ttf'~}}') format('truetype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-Regular.svg#IngraSCVO-Regular'~}}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Ingra';
+  src: url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.eot'~}}');
+  src: url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.eot?#iefix'~}}') format('embedded-opentype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.woff2'~}}') format('woff2'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.woff'~}}') format('woff'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.ttf'~}}') format('truetype'),
+       url('{{~>asset_url url='fonts/IngraSCVO-SemiBold.svg#IngraSCVO-SemiBold'~}}') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  }
+  </style>
+
   <link type="text/css" rel="stylesheet" href="{{~>asset_url url='main.css'~}}">
 </head>
 <body class="{{#if request.params.path}}{{replace request.params.path '_' ' '}}{{else}}home{{/if}}">
@@ -110,7 +146,7 @@
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-9-desktop">
                   <h3>About</h3>
                   <p>
-                    <strong>Scotland for Europe</strong> emerged from a discussion between a range of like-minded civil society activists. In its initial phase, the campaign is being coordinated on a voluntary basis by Vanessa Glynn, Chair of the <a href="http://www.euromovescotland.org.uk/">European Movement in Scotland</a> (EmiS), Colin Campbell Executive, Director of <a href="http://social-capital.net/">Assist Social Capital</a>, Kirsty Hughes, Director of the <a href="https://www.scer.scot/">Scottish Centre on European Relations</a> and the <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>. EMiS has received a small grant from <a href="https://www.bestforbritain.org/">Best for Britain</a> towards start-up costs.
+                    <strong>Scotland for Europe</strong> emerged from a discussion between a range of like-minded civil society activists. In its initial phase, the campaign is being coordinated on a voluntary basis by Vanessa Glynn, Chair of the <a href="http://www.euromovescotland.org.uk">European Movement in Scotland</a> (EmiS), Colin Campbell Executive, Director of <a href="http://social-capital.net">Assist Social Capital</a>, Kirsty Hughes, Director of the <a href="https://www.scer.scot">Scottish Centre on European Relations</a> and the <a href="https://scvo.scot">Scottish Council for Voluntary Organisations</a>. EMiS has received a small grant from <a href="https://www.bestforbritain.org">Best for Britain</a> towards start-up costs.
                   </p>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop">
@@ -140,12 +176,13 @@
               <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-9-desktop">
                   <p>
-                    &copy; {{momentFormat (moment) "YYYY"}}. The Scottish Council for Voluntary Organisations (SCVO) is a Scottish Charitable Incorporated Organisation. Charity registered in Scotland <a href="https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC003558">SC003558</a>. Registered office Mansfield Traquair Centre, 15 Mansfield Place, Edinburgh EH3 6BB.
+                    &copy; {{momentFormat (moment) "YYYY"}}. The Scottish Council for Voluntary Organisations (SCVO) is a Scottish Charitable Incorporated Organisation.<br />Charity registered in Scotland <a href="https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC003558">SC003558</a>. Registered office Mansfield Traquair Centre, 15 Mansfield Place, Edinburgh EH3 6BB.
                   </p>
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop">
-                  <a href="https://scvo.org" title="Scottish Council for Voluntary Organisations">
-                    <img src="https://storage.googleapis.com/scvo-assets/scvo-frontend/assets/images/logos/scvo.png" alt="Scottish Council for Voluntary Organisations" class="logo scvo" />
+                  <a href="https://scvo.scot" title="Scottish Council for Voluntary Organisations" class="brand-logo">
+                    {{!-- <img src="https://storage.googleapis.com/scvo-assets/scvo-frontend/assets/images/logos/scvo.png" alt="Scottish Council for Voluntary Organisations" class="logo scvo" /> --}}
+                    <img src="{{~>asset_url url='images/logos/scvo-secondary.svg'~}}" alt="Scottish Council for Voluntary Organisations" />
                   </a>
                 </div>
               </div>

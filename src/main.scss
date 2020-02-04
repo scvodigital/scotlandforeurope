@@ -24,8 +24,9 @@ $heading-font-weight:               600;
 $footer-font-family:                "Ingra", Helvetica, Arial, sans-serif;
 $footer-font-weight:                400;
 
-$gray-color: #D5D8DC;
+$primary-color: #FF595A;
 $secondary-color: #244B5A;
+$gray-color: #D5D8DC;
 
 h1,
 h2,
@@ -128,7 +129,7 @@ html {
   line-height: 1.45;
 }
 body {
-  background-color: $mdc-theme-footer-light;
+  background-color: $secondary-color;
   min-height: 100%;
   padding: 0;
   margin: 0;
@@ -772,13 +773,14 @@ footer {
   a {
     color: white;
     text-decoration: none !important;
-    border-bottom: $thick-line solid transparent;
-    transition: border $transition-speed;
+    // border-bottom: $thick-line solid transparent;
+    transition: color $transition-speed;
   }
+  .mdc-list .mdc-list-item a:hover,
   a:hover,
   a:active,
   a:focus {
-    color: white;
+    color: $primary-color;
     border-bottom-color: white;
     text-decoration: none !important;
   }

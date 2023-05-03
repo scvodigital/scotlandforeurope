@@ -10,7 +10,15 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-J5NM685R6M');
+    gtag('config', 'G-J5NM685R6M', {
+      'send_page_view': true,
+      'anonymize_ip': true,
+      'cookieDomain': 'none',
+      'custom_map': {
+        'dimension1': 'hit_type',
+        'dimension2': 'parent_document'
+      }
+    });
   </script>
 
   {{{layoutParts.head}}}
@@ -33,7 +41,6 @@
   <meta name="msapplication-TileImage" content="{{~>asset_url url='images/icons/ms-icon-144x144.png'~}}">
   <meta name="theme-color" content="#0070bb">
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3467930-31"></script>
   <script>
   {{#ifAny request.params.query.debug (compare request.url.hostname "scotlandforeurope.local") ~}}
   console.log('#### DEBUG MODE ON ####');

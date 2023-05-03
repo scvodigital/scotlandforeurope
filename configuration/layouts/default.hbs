@@ -3,6 +3,16 @@
 <head>
   <meta charset="utf-8">
   <base href="/">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J5NM685R6M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-J5NM685R6M');
+  </script>
+
   {{{layoutParts.head}}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" sizes="57x57" href="{{~>asset_url url='images/icons/apple-icon-57x57.png'~}}">
@@ -25,12 +35,6 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3467930-31"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-3467930-31', { 'send_page_view': true, 'anonymize_ip': true });
-
   {{#ifAny request.params.query.debug (compare request.url.hostname "scotlandforeurope.local") ~}}
   console.log('#### DEBUG MODE ON ####');
   console.log('Request:', {{{regexReplace (regexReplace (stringify request) "(<\/script)" "gi" '</scr\" + \"ipt') "(\r|\n)" "gi" ""}}});
